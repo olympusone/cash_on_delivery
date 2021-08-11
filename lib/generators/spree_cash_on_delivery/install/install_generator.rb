@@ -4,7 +4,7 @@ module SpreeCashOnDelivery
       class_option :migrate, type: :boolean, default: true
 
       def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=spree_sample'
+        run 'bundle exec rake railties:install:migrations FROM=spree_cash_on_delivery'
       end
 
       def run_migrations
