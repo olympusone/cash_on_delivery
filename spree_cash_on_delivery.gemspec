@@ -7,10 +7,10 @@ $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_cash_on_delivery'
-  s.version     = SpreeCashOnDelivery.version
+  s.version     = '0.0.1'#SpreeCashOnDelivery.version
   s.summary     = 'Add extension summary here'
   s.description = 'Add (optional) extension description here'
-  s.required_ruby_version = '>= 2.5'
+  s.required_ruby_version = '>= 2.7'
 
   s.author    = 'You'
   s.email     = 'support@olympusone.com'
