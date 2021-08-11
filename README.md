@@ -1,4 +1,4 @@
-# SpreeCashOnDeliveryExtension
+# SpreeCashOnDelivery
 
 Introduction goes here.
 
@@ -7,7 +7,7 @@ Introduction goes here.
 1. Add this extension to your Gemfile with this line:
 
     ```ruby
-    gem 'spree_cash_on_delivery_extension'
+    gem 'spree_cash_on_delivery'
     ```
 
 2. Install the gem using Bundler
@@ -19,7 +19,7 @@ Introduction goes here.
 3. Copy & run migrations
 
     ```ruby
-    bundle exec rails g spree_cash_on_delivery_extension:install
+    bundle exec rails g spree_cash_on_delivery:install
     ```
 
 4. Restart your server
@@ -39,7 +39,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_cash_on_delivery_extension/factories'
+require 'spree_cash_on_delivery/factories'
 ```
 
 ## Releasing

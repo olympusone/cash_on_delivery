@@ -1,4 +1,4 @@
-module SpreeCashOnDeliveryExtension
+module SpreeCashOnDelivery
   VERSION = '0.0.1'.freeze
 
   module_function

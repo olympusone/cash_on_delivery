@@ -4,6 +4,8 @@ module SpreeCashOnDelivery
     isolate_namespace Spree
     engine_name 'spree_cash_on_delivery'
 
+    config.autoload_paths += %W(#{config.root}/lib)
+
     # use rspec for tests
     config.generators do |g|
       g.test_framework :rspec
