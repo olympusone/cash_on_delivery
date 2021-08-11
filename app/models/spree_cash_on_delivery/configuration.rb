@@ -1,4 +1,4 @@
-module SpreeSampleExtension
+module SpreeCashOnDelivery
   class Configuration < Spree::Preferences::Configuration
 
    # Some example preferences are shown below, for more information visit:

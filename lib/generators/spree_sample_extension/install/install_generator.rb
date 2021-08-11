@@ -1,10 +1,10 @@
-module SpreeSampleExtension
+module SpreeCashOnDelivery
   module Generators
     class InstallGenerator < Rails::Generators::Base
       class_option :migrate, type: :boolean, default: true
 
       def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=spree_sample_extension'
+        run 'bundle exec rake railties:install:migrations FROM=spree_sample'
       end
 
       def run_migrations
