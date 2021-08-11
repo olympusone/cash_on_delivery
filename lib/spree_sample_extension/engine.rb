@@ -9,7 +9,7 @@ module SpreeCashOnDelivery
       g.test_framework :rspec
     end
 
-    initializer 'spree_cash_on_delivery_.environment', before: :load_config_initializers do |_app|
+    initializer 'spree_cash_on_delivery.environment', before: :load_config_initializers do |_app|
       SpreeCashOnDelivery::Config = SpreeCashOnDelivery::Configuration.new
     end
 
