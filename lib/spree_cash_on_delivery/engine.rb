@@ -6,8 +6,8 @@ module SpreeCashOnDelivery
 
     # config.autoload_paths += %W(#{config.root}/lib)
 
-    initializer 'spree.register.payment_methods', before: :load_config_initializers do |_app|
-      # _app.config.spree.payment_methods << Spree::PaymentMethod::CashOnDelivery
+    initializer 'spree.register.payment_methods', before: :after_initialize do |_app|
+      _app.config.spree.payment_methods << Spree::PaymentMethod::CashOnDelivery
     end
 
     # use rspec for tests
