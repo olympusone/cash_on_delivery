@@ -8,9 +8,8 @@ module SpreeCashOnDelivery
 
     initializer 'spree.register.payment_methods', after: :after_initialize do |_app|
       _app.config.spree.payment_methods << Spree::PaymentMethod::CashOnDelivery
-      _app.config.spree.adjusters << Spree::Adjustable::Adjuster::PaymentMethod
     end
-
+    
     # use rspec for tests
     config.generators do |g|
       g.test_framework :rspec
@@ -23,8 +22,8 @@ module SpreeCashOnDelivery
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/spree/*_decorator*.rb')) do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
-
       end
+      
       Dir.glob(File.join(File.dirname(__FILE__), '../../lib/active_merchant/**/*_decorator*.rb')) do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
