@@ -8,6 +8,7 @@ module SpreeCashOnDelivery
 
     initializer 'spree.register.payment_methods', after: :after_initialize do |_app|
       _app.config.spree.payment_methods << Spree::PaymentMethod::CashOnDelivery
+      _app.config.spree.adjusters << Spree::Adjustable::Adjuster::PaymentMethod
     end
 
     # use rspec for tests
