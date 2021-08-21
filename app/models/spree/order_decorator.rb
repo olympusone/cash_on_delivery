@@ -8,6 +8,8 @@ module Spree::OrderDecorator
             .map { |m| m.payment_method.type }
             .include?("Spree::PaymentMethod::CashOnDelivery")
     end
+
+
 end
   
 ::Spree::Order.prepend(Spree::OrderDecorator)
