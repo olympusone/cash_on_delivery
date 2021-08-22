@@ -4,7 +4,7 @@ module SpreeCashOnDelivery
     isolate_namespace Spree
     engine_name 'spree_cash_on_delivery'
 
-    # config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += %W(#{config.root}/lib)
 
     initializer 'spree.register.payment_methods', after: :after_initialize do |_app|
       _app.config.spree.payment_methods << Spree::PaymentMethod::CashOnDelivery

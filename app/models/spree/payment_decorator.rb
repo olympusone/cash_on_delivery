@@ -9,11 +9,11 @@ module Spree::PaymentDecorator
     private
     
     def set_adjustment
-        if payment_method.type == "Spree::PaymentMethod::CashOnDelivery"
+        if payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && payment_method.charge
             label = I18n.t('cash_on_delivery.charge_label')
 
             build_adjustment(
-                amount: 2.5,
+                amount: payment_method.charge,
                 label: label,
                 order: order,
                 included: false,
@@ -34,8 +34,9 @@ module Spree::PaymentDecorator
     end
 
     def update_adjustment
-        if payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && void?
+        if payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && void? && adjustment
             adjustment.update(eligible: false) 
+            
             order.update_totals
             order.persist_totals
         end

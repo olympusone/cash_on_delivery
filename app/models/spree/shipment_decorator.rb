@@ -1,6 +1,6 @@
 module Spree::ShipmentDecorator
     def determine_state(order)   
-        return 'ready' if cash_on_delivery?
+        return 'ready' if cash_on_delivery? && !shipped?
         
         return 'canceled' if order.canceled?
         return 'pending' unless order.can_ship?
