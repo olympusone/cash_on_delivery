@@ -34,7 +34,7 @@ module Spree::PaymentDecorator
     end
 
     def update_adjustment
-        if payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && void? && adjustment
+        if payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && (void? || invalid?) && adjustment
             adjustment.update(eligible: false) 
             
             order.update_totals
