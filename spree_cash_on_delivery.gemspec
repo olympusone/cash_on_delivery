@@ -8,12 +8,12 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_cash_on_delivery'
   s.version     = SpreeCashOnDelivery.version
-  s.summary     = 'Add extension summary here'
-  s.description = 'Add (optional) extension description here'
+  s.summary     = 'Spree Cash On Delivery'
+  s.description = ''
   s.required_ruby_version = '>= 2.7.3'
 
-  s.author    = 'You'
-  s.email     = 'you@example.com'
+  s.author    = 'OlympusOne'
+  s.email     = 'support@olympusone.com'
   s.homepage  = 'https://github.com/olympusone/spree_cash_on_delivery'
   s.license = 'BSD-3-Clause'
 
