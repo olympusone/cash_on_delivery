@@ -1,5 +1,7 @@
 # SpreeCashOnDelivery
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/2d267f05a2c5bc404d1f/maintainability)](https://codeclimate.com/github/olympusone/spree_cash_on_delivery/maintainability)
+
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
