@@ -2,6 +2,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/2d267f05a2c5bc404d1f/maintainability)](https://codeclimate.com/github/olympusone/spree_cash_on_delivery/maintainability)
 
+Spree Cash On Delivery extension allows web store administrator to ship order before payment is done.
+
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
@@ -16,13 +18,7 @@
     bundle install
     ```
 
-3. Copy & run migrations
-
-    ```ruby
-    bundle exec rails g spree_cash_on_delivery:install
-    ```
-
-4. Restart your server
+3. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
 
