@@ -5,9 +5,9 @@ module Spree::PaymentDecorator
         base.after_create :set_adjustment
         base.before_update :update_adjustment
     end
-    
+
     private
-    
+
     def set_adjustment
         if payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && payment_method.charge
             label = I18n.t('cash_on_delivery.charge_label')
@@ -42,5 +42,5 @@ module Spree::PaymentDecorator
         end
     end
 end
-  
+
 ::Spree::Payment.prepend(Spree::PaymentDecorator)

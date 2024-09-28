@@ -1,5 +1,5 @@
 module Spree::ShipmentDecorator
-    def determine_state(order)   
+    def determine_state(order)
         return 'ready' if cash_on_delivery? && !shipped?
         
         return 'canceled' if order.canceled?
@@ -13,9 +13,9 @@ module Spree::ShipmentDecorator
     private
     def cash_on_delivery?
         order.payments.any? do |payment|
-          payment.payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && !payment.void?
+            payment.payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && !payment.void?
         end
     end
 end
-  
+
 ::Spree::Shipment.prepend(Spree::ShipmentDecorator)
