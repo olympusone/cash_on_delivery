@@ -4,6 +4,8 @@ module Spree::OrderDecorator
     end
 
     def cash_on_delivery?
+        return false unless ship_address.country_iso == 'GR'
+        
         payments.where.not(state: ['failed', 'void'])
                 .map { |m| m.payment_method.type }
                 .include?("Spree::PaymentMethod::CashOnDelivery")

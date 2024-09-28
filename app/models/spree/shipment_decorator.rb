@@ -12,6 +12,8 @@ module Spree::ShipmentDecorator
 
     private
     def cash_on_delivery?
+        return false unless order.ship_address.country_iso == 'GR'
+        
         order.payments.any? do |payment|
             payment.payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && !payment.void?
         end
